@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+   My Blog
+{% endblock %}
+
+{% block css_files %}
+   <link rel="stylesheet" href="{% static "blog/post.css" %}"/>
+   <link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section id="welcome">
+   <header>
+     <img src="{% static "blog/images/sona.jpeg "%}" alt="Max - The Author of This Blog"/>
+     <h2>SONABHASKAR'S BLOG</h2>
+   </header>
+   <p> Hi, I am Sona and I love to blog about tech and the world!</p>
+</section>
+
+<section id="latest-post">
+    <h2>My Latest Thoughts</h2>
+
+    <ul>
+        {% for post in posts %}
+        {% include "blog/includes/post.html" %}
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What I do</h2>
+    <p>I love programming, I love to help others and I enjoy exploring new
+         technology in general!
+    </p>
+    <p>
+        My goal is to keep on growing as a developer and if i could help youn do 
+        the same, I'd be  very happy!
+    </p>
+
+</section>
+{% endblock %}

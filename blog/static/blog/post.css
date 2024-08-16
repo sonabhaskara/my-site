@@ -1,0 +1,53 @@
+/* Ensure all posts are displayed as blocks */
+.post {
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+/* Ensure the image is sized appropriately */
+.post img {
+    width: 5rem; /* Make the image take up the full width of its container */
+    height: 5rem;
+    max-width: 100px; /* Set a maximum width for the image */
+    border-radius: 50%; /* Keep the images circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin: 0 auto 1rem auto; /* Center the image and add margin below */
+}
+
+/* Style the post title */
+.post h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Ensure content inside the post is centered */
+.post_content {
+    text-align: center;
+}
+
+/* Add hover effect to the links */
+.post a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post a:hover,
+.post a:active {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* Additional styling for post content */
+.post p {
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}

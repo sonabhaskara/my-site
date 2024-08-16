@@ -1,0 +1,95 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.25s ease;
+    padding: 1rem;
+}
+
+.post a:hover,
+.post a:active {
+    transform: scale(1.1);
+    background-color: #390281;
+    color: white;
+}
+
+.post img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post h3 {
+    margin: 0.25rem 0;
+}
+
+.post time {
+    color: #666666;
+    margin: 0.25rem;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.post:hover time,
+.post:active time {
+    color: whitesmoke;
+}
+
+#latest-post, #latest-post h2, #latest-post ul, #latest-post li, #latest-post article, #latest-post .post_content {
+    color: black;
+}
+
+/* Set white background for latest-post section */
+#latest-post {
+    background-color: white;
+}
+
+/* Center the image in the article */
+#latest-post ul li article {
+    text-align: center;
+}
+
+/* Make the latest-post section into a box shape */
+#latest-post {
+    width: 80%; /* Adjust width to make the box smaller */
+    max-width: 600px; /* Adjust max-width for a more compact box */
+    margin: 3rem auto; /* Reduce margin for a tighter fit */
+    padding: 1rem; /* Adjust padding for a smaller box */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Change background of image and paragraph to dark blue when clicked, and font to white */
+#latest-post ul li article:hover .post_content,
+#latest-post ul li article:active .post_content {
+    background-color: darkblue;
+    color: white;
+}
+
+/* Ensure the heading changes color to white when clicked */
+#latest-post ul li article:hover h3,
+#latest-post ul li article:active h3 {
+    color: white;
+}
+
+/* Make the image round and maintain appropriate size */
+#latest-post ul li article img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Make font bold for the paragraph and image heading */
+#latest-post ul li article h3,
+#latest-post ul li article p {
+    font-weight: bold;
+}
